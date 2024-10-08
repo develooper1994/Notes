@@ -48,6 +48,10 @@ sudo mkdir -p $HOME/shared
 ``` bash
 sudo mount -a
 ```
+Eğer `mount` komut işe yaramazsa muhtemelen init sistemi systemd ile yönetiliyordur. O zaman aşağıdaki komutu deneyin.
+``` bash
+systemctl daemon-reload
+```
 
 ilk satır paylaşılan dizini mount eder. `/mnt/hgfs` dizininin hiçbir şekilde adının değişmediği ve silinmediği varsayılmaktadır! 
 ikici satır ise paylaşılan dizin usb takmış gibi göstermek üzere $HOME dizine mount edilir. $HOME/shared dizini kullanıcı adına göre değişebilmektedir!
