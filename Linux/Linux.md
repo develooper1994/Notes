@@ -40,9 +40,14 @@ sudo mkdir -p $HOME/shared
 
 > /etc/fstab
 
+```
 .host:/    /mnt/hgfs/    fuse.vmhgfs-fuse    defaults,allow_other,uid=1000     0    0
 /mnt/hgfs/ /home/<username>/shared none bind 0 0
+```
+
+``` bash
 sudo mount -a
+```
 
 ilk satır paylaşılan dizini mount eder. `/mnt/hgfs` dizininin hiçbir şekilde adının değişmediği ve silinmediği varsayılmaktadır! 
 ikici satır ise paylaşılan dizin usb takmış gibi göstermek üzere $HOME dizine mount edilir. $HOME/shared dizini kullanıcı adına göre değişebilmektedir!
