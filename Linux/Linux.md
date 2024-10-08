@@ -31,8 +31,12 @@ qtcreator:
 ```
 
 ## automount
-$`sudo mkdir -p /mnt/hgfs/`
-$`sudo mkdir -p $HOME/shared`
+```bash
+sudo mkdir -p /mnt/hgfs/
+```
+```bash
+sudo mkdir -p $HOME/shared
+```
 
 > /etc/fstab
 
