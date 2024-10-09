@@ -70,3 +70,8 @@ yeni makineye paketleri yükle:
 ```bash
 xargs -a paket_listesi.txt sudo apt-get install -y
 ```
+
+<hr>
+
+# Framebuffer Temizle
+dd if=/dev/zero of=/dev/fb
