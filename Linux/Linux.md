@@ -75,3 +75,25 @@ xargs -a paket_listesi.txt sudo apt-get install -y
 
 # Framebuffer Temizle
 dd if=/dev/zero of=/dev/fb
+
+<hr>
+
+# lddtree -> pax-utils
+Bu utility sayesinde ldd aracından daha iyi bağımlılık ağacı elde edilebiliyor. Her bağımlılığın başka hangi bağımlılıkları varsa gösterilebiliyor.
+
+```bash
+$ lddtree $(which ssh)
+/usr/bin/ssh (interpreter => /lib64/ld-linux-x86-64.so.2)
+    libselinux.so.1 => /lib/x86_64-linux-gnu/libselinux.so.1
+        libpcre2-8.so.0 => /lib/x86_64-linux-gnu/libpcre2-8.so.0
+    libgssapi_krb5.so.2 => /lib/x86_64-linux-gnu/libgssapi_krb5.so.2
+        libkrb5.so.3 => /lib/x86_64-linux-gnu/libkrb5.so.3
+            libkeyutils.so.1 => /lib/x86_64-linux-gnu/libkeyutils.so.1
+            libresolv.so.2 => /lib/x86_64-linux-gnu/libresolv.so.2
+        libk5crypto.so.3 => /lib/x86_64-linux-gnu/libk5crypto.so.3
+        libcom_err.so.2 => /lib/x86_64-linux-gnu/libcom_err.so.2
+        libkrb5support.so.0 => /lib/x86_64-linux-gnu/libkrb5support.so.0
+    libcrypto.so.3 => /lib/x86_64-linux-gnu/libcrypto.so.3
+    libz.so.1 => /lib/x86_64-linux-gnu/libz.so.1
+    libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6
+```
