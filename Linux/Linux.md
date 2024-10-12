@@ -80,6 +80,7 @@ dd if=/dev/zero of=/dev/fb
 
 # lddtree -> pax-utils
 Bu utility sayesinde ldd aracından daha iyi bağımlılık ağacı elde edilebiliyor. Her bağımlılığın başka hangi bağımlılıkları varsa gösterilebiliyor.
+!!!Dosya sistemi oluştururken çok işe yarayabilir!!!
 
 ```bash
 $ lddtree $(which ssh)
