@@ -74,7 +74,9 @@ xargs -a paket_listesi.txt sudo apt-get install -y
 <hr>
 
 # Framebuffer Temizle
+```bash
 dd if=/dev/zero of=/dev/fb
+```
 
 <hr>
 
