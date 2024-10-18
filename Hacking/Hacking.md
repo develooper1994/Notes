@@ -1,2 +1,2 @@
-# OSINT(Open Source Intelligence) Tool list
+# OSINT(Open Source Intelligence) Tools
 https://osintframework.com/
